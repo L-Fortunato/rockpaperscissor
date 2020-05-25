@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function playGame(userInput, comInput) {
+
+            const compArr = ["rock", "paper", "scissors"];
+
+            userInput = prompt("Select your move")
+
+            let userLower = userInput.toLowerCase();
+
+            comInput = compArr[Math.floor(Math.random() * compArr.length)];
+
+            if (compArr.indexOf(userLower) > -1) {
+                if (userLower === "rock" && comInput === "paper") {
+                    alert(`You Lose! paper beats rock!`)
+                }
+                else if (userLower === "paper" && comInput === "scissors") {
+                    alert(`You Lose! scissors beats paper!`)
+                }
+                else if (userLower === "scissors" && comInput === "rock") {
+                    alert(`You Lose! rock beats scissors!`)
+                }
+                else if (userLower === comInput) {
+                    alert(`It's a Draw! ${comInput} is equal to ${userLower}!`)
+                }
+                else {
+                    alert(`You Win! ${userLower} beats ${comInput}!`)
+                }
+            } else {
+                alert(`Please, insert a valid option`)
+            }
+
+        }
+
+
+        function game() {
+            for (i = 0; i < 5; i++) {
+                playGame()
+            }
+        }
+
+    </script>
+</body>
+
+</html>
