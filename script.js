@@ -9,14 +9,9 @@ buttonStart.onclick = game;
 function playGame(userInput, comInput) {
 
     const compArr = ["rock", "paper", "scissors"];
-
     userInput = prompt("Select your move")
-
     let userLower = userInput.toLowerCase();
-
     comInput = compArr[Math.floor(Math.random() * compArr.length)];
-
-    
 
     if (compArr.indexOf(userLower) > -1) {
         if (userLower === "rock" && comInput === "paper" || userLower === "paper" && comInput === "scissors" || userLower === "scissors" && comInput === "rock") {
@@ -51,6 +46,8 @@ function draw (){
 }
 
 function game() {
+    scorePlayer = 0;
+    scoreComp = 0;
     for (i = 0; i < 5; i++) {
         playGame();   
     }if (scorePlayer > scoreComp){
