@@ -48,6 +48,7 @@ function draw (){
 function game() {
     scorePlayer = 0;
     scoreComp = 0;
+    
     for (i = 0; i < 5; i++) {
         playGame();   
     }if (scorePlayer > scoreComp){
